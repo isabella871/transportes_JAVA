@@ -20,7 +20,7 @@ public class Carro extends Transporte implements Vehiculo {
     @Override
     public void arrancar(){
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Arrancar el vehiculo...");
+        System.out.println("Arrancar el vehiculo...");
         System.out.println("Elejir método de arranque...");
         System.out.println("1. Ingresar llave / 2.Presione botón de arranque");
         int arrancarCarro = scanner.nextInt();
@@ -35,6 +35,8 @@ public class Carro extends Transporte implements Vehiculo {
             }else{
                 System.out.println("El carro se encuentra estático");
             }
+        }else{
+            System.out.println("El carro se encuentra en movimiento");
         }
         scanner.nextLine();
     }
@@ -42,6 +44,7 @@ public class Carro extends Transporte implements Vehiculo {
     @Override
     public void detener(){
         Scanner scanner = new Scanner(System.in);
+        System.out.println("-------- Detener --------");
         System.out.print("El carro se ha detenido...");
         scanner.nextLine();
     }

@@ -1,6 +1,6 @@
 package taller7_transportadora;
 
-public abstract class Transporte{ // usar setter y getters para acceder a los atributos
+public abstract class Transporte{ 
     private String marca;
     private String modelo;
     private String velocidadMaxima;

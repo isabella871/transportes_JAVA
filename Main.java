@@ -1,3 +1,5 @@
+package taller7_transportadora;
+
 import java.util.Scanner;
 
 public class Main {
@@ -25,8 +27,10 @@ public class Main {
                     System.out.print("Velocidad Máxima: ");
                     String velocidadMaxima = scanner.nextLine();
 
-                    Vehiculo bicicleta = new Vehiculo(marca, modelo, velocidadMaxima);
+                    Bicicleta bicicleta = new Bicicleta(marca, modelo, velocidadMaxima);
                     bicicleta.mostrarInformacion();
+                    bicicleta.arrancar();
+                    bicicleta.detener();
                     bicicleta.tipoCombustible("No usa ningún tipo de combustible");
                     break;
 
@@ -41,7 +45,9 @@ public class Main {
 
                     Moto moto = new Moto(marcaMoto, modeloMoto, velocidadMaximaMoto);
                     moto.mostrarInformacion();
-                    moto.tipoCombustible("gasolina"); 
+                    moto.arrancar();
+                    moto.detener();
+                    moto.tipoCombustible("No usa ningún tipo de combustible");
                     break;
 
                 case 3:
@@ -56,6 +62,8 @@ public class Main {
                     Carro carro = new Carro(marcaCarro, modeloCarro, velocidadMaximaCarro);
                     carro.mostrarInformacion();
                     carro.tipoCombustible("Gasolina");
+                    carro.arrancar();
+                    carro.detener();
                     break;
             
                 default: 
@@ -66,4 +74,3 @@ public class Main {
         scanner.close();
     }
 }
-
